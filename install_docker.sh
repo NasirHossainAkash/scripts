@@ -14,3 +14,6 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 docker run hello-world
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
+wget https://github.com/docker/compose/releases/download/v2.11.1/docker-compose-linux-x86_64
+sudo mv docker-compose-linux-x86_64 /usr/bin/docker-compose 
+sudo chmod +x /usr/bin/docker-compose
