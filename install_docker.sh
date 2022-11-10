@@ -14,5 +14,9 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 docker run hello-world
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
+sudo groupadd docker
+sudo usermod -aG docker $USER
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chmod g+rwx "$HOME/.docker" -R
 docker --version
 docker compose --version
